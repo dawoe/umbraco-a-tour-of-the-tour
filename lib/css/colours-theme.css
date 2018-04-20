@@ -217,6 +217,10 @@
    word-wrap: break-word;
    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3); }
 
+   .reveal pre.small {
+     font-size:0.35em;
+   }
+
  .reveal code {
    font-family: monospace; }
 
