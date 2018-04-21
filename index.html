@@ -464,6 +464,44 @@
 											</code></pre>
 			</section>
 			<section>
+				<h2>Starting tours without a tour file</h2>
+				<ul>
+					<li class="fragment">By passing in a tour JSON object in to the tourService startTour method</li>
+					<li class="fragment">Useful for tours that should not be shown in the help drawer</li>
+					<li class="fragment">eg...from dashboard show the user where to find help</li>
+					<li class="fragment">eg...starting tour from a content page</li>
+				</ul>
+				<p></p>
+			</section>
+			<section>
+				<h2>No tour file example</h2>
+				<pre class="small"><code class="javascript" data-trim contenteditable>
+					(function () {
+						"use strict";
+
+						function ChangePasswordController($scope, tourService) {
+							var vm = this;
+
+							var tour = {}; // a valid tour object
+
+							function startHelp() {
+								tourService.startTour(tour);
+							};
+
+							vm.startHelp = startHelp;
+						}
+
+						angular.module("umbraco").controller("TourDemo.HelpDashBoard.ChangePasswordController",
+							[
+								"$scope",
+								"tourService",
+								ChangePasswordController
+							]);
+
+					})();
+											</code></pre>
+			</section>
+			<section>
 				<h2>Useful links - Packages</h2>
 				<ul>
 					<li>
