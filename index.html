@@ -364,7 +364,7 @@
 			</section>
 			<section>
 				<h2>Custom step view</h2>
-				<pre class="small"><code class="javascript" data-trim contenteditable>
+				<pre class="small"><code class="html" data-trim contenteditable>
 &lt;div ng-controller="TourDemo.RequiredInputController as vm"&gt;
     &lt;umb-tour-step on-close="model.endTour()"&gt;
         &lt;umb-tour-step-header title="model.currentStep.title"&gt;
@@ -395,6 +395,72 @@
 						  "~/App_Plugins/CustomSteps/requiredinput-controller.js",
 						]
 					}
+											</code></pre>
+			</section>
+			<section class="dark-bg-slide" data-background-image="lib/images/dashboard.jpg" data-background-transition="convex">
+				<h1>Starting tours from outside the help drawer</h1>
+			</section>
+			<section>
+				<h2>Demo - start from dashboard</h2>
+				<video data-autoplay controls preload="auto" poster="lib/video/tour-editor-demo.png">
+					<source src="lib/video/dash-board-demo.mp4" type="video/mp4">
+				</video>
+			</section>
+			<section>
+				<h2>How ?</h2>
+				<ul>
+					<li class="fragment">Inject the tourService in your controller</li>
+					<li class="fragment">Use the tourService to get the tour by alias</li>
+					<li class="fragment">Use the tourService to start the tour</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Dashboard controller</h2>
+				<pre class="small"><code class="javascript" data-trim contenteditable>
+					(function () {
+						"use strict";
+
+						function ChangePasswordController($scope, tourService) {
+							var vm = this;
+
+							function startHelp() {
+								tourService.getTourByAlias('howToChangeMyPassword').then(function(tour) {
+									tourService.startTour(tour);
+								});
+							};
+
+							vm.startHelp = startHelp;
+						}
+
+						angular.module("umbraco").controller("TourDemo.HelpDashBoard.ChangePasswordController",
+							[
+								"$scope",
+								"tourService",
+								ChangePasswordController
+							]);
+
+					})();
+											</code></pre>
+			</section>
+			<section>
+				<h2>Dashboard view</h2>
+				<pre class="small"><code class="html" data-trim contenteditable>
+&lt;div ng-controller="TourDemo.HelpDashBoard.ChangePasswordController as vm"&gt;
+    &lt;umb-box&gt;
+        &lt;umb-box-header
+            title="How do I change my password"&gt;&lt;/umb-box-header&gt;
+
+        &lt;umb-box-content&gt;
+            &lt;umb-button action="vm.startHelp()"
+                        type="button"
+                        button-style="success"
+                        label="Show me"
+                        icon="icon-user"
+                       &gt;
+            &lt;/umb-button&gt;
+        &lt;/umb-box-content&gt;
+    &lt;/umb-box&gt;
+&lt;/div&gt;
 											</code></pre>
 			</section>
 			<section>
