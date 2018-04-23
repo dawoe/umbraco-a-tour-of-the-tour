@@ -1,0 +1,98 @@
+[
+  {
+    "name": "How to change my password",
+    "alias": "howToChangeMyPassword",
+    "group": "Managing my user profile",
+    "groupOrder": 1,
+    "allowDisable": true,
+    "requiredSections": [
+      "content"
+    ],
+    "steps": [
+      {
+        "title": "Changing password",
+        "content": "<p>This tour will show you how to change your password</p>",
+        "type": "intro",
+        "element": null,
+        "elementPreventClick": false,
+        "backdropOpacity": 0.6,
+        "event": null,
+        "view": null,
+        "eventElement": null,
+        "customProperties": null
+      },
+      {
+        "title": "Click on your avatar",
+        "content": "<p>You need to click on your avatar.</p>\n<p>This will bring up a dialog with several user options</p>",
+        "type": null,
+        "element": "#section-avatar",
+        "elementPreventClick": false,
+        "backdropOpacity": 0.6,
+        "event": "click",
+        "view": null,
+        "eventElement": "#section-avatar .umb-avatar",
+        "customProperties": null
+      },
+      {
+        "title": "Change your password",
+        "content": "<p>Click on  the change password button</p>",
+        "type": null,
+        "element": "[data-element=\"button-changePassword\"]",
+        "elementPreventClick": false,
+        "backdropOpacity": 0.6,
+        "event": "click",
+        "view": null,
+        "eventElement": null,
+        "customProperties": null
+      },
+      {
+        "title": "Fill your old password",
+        "content": "<p>To change your password you need to enter your old password</p>",
+        "type": null,
+        "element": "input[name=\"oldPassword\"]",
+        "elementPreventClick": true,
+        "backdropOpacity": 0.6,
+        "event": null,
+        "view": null,
+        "eventElement": null,
+        "customProperties": null
+      },
+      {
+        "title": "Fill in your new password",
+        "content": "<p>Fill in your new password. This needs to be at least 10 characters long. Ideally it contains a lower and uppercase characters, a number and a non alphanumeric character</p>",
+        "type": null,
+        "element": "input[name=\"password\"]",
+        "elementPreventClick": true,
+        "backdropOpacity": 0.6,
+        "event": null,
+        "view": null,
+        "eventElement": null,
+        "customProperties": null
+      },
+      {
+        "title": "Confirm your new password",
+        "content": "<p>Type your new password again to confirm it</p>",
+        "type": null,
+        "element": "input[name=\"confirmpassword\"]",
+        "elementPreventClick": true,
+        "backdropOpacity": 0.6,
+        "event": null,
+        "view": null,
+        "eventElement": null,
+        "customProperties": null
+      },
+      {
+        "title": "Save your password",
+        "content": "<p>To save your new password click the change password button. But for now just close the dialog by clicking the close button</p>",
+        "type": null,
+        "element": "[data-element=\"button-overlayClose\"]",
+        "elementPreventClick": false,
+        "backdropOpacity": 0.6,
+        "event": "click",
+        "view": null,
+        "eventElement": null,
+        "customProperties": null
+      }
+    ]
+  }
+]

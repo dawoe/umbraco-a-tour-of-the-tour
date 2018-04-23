@@ -1,0 +1,76 @@
+[
+  {
+    "name": "Create script file",
+    "alias": "createScriptFile",
+    "group": "Javascript files",
+    "groupOrder": 5,
+    "allowDisable": true,
+    "requiredSections": [
+      "settings"
+    ],
+    "steps": [
+      {
+        "title": "Go to settings",
+        "content": "Click on the settings icon to go to the settings section",
+        "type": null,
+        "element": "[data-element='section-settings']",
+        "elementPreventClick": false,
+        "backdropOpacity": null,
+        "event": "click",
+        "view": null,
+        "eventElement": null,
+        "customProperties": null
+      },
+      {
+        "title": "Click on the 3 dots of the scripts tree item",
+        "content": "",
+        "type": null,
+        "element": "#tree [data-element='tree-item-scripts']",
+        "elementPreventClick": false,
+        "backdropOpacity": 0.5,
+        "event": "click",
+        "view": null,
+        "eventElement": "#tree [data-element='tree-item-scripts'] [data-element='tree-item-options']",
+        "customProperties": null
+      },
+      {
+        "title": "Create a new script",
+        "content": "<p>Select the javascript file option</p>",
+        "type": null,
+        "element": ".umb-actions li:first",
+        "elementPreventClick": false,
+        "backdropOpacity": 0.4,
+        "event": "click",
+        "view": null,
+        "eventElement": null,
+        "customProperties": null
+      },      
+      {
+        "title": "Enter the name of the script",
+        "content": "<p>Enter the name of your script file. Enter <em><strong>HelloWorld</strong></em></p>",
+        "type": null,
+        "element": "[data-element='editor-name-field']",
+        "elementPreventClick": false,
+        "backdropOpacity": 0.5,
+        "event": null,
+        "view": "/App_Plugins/CustomSteps/requiredinput.html",
+        "eventElement": null,
+        "customProperties": {
+          "input": "HelloWorld"
+        }
+      },
+      {
+        "title": "Push the create button",
+        "content": "<p>Push the create button to create your dictionary</p>",
+        "type": null,
+        "element": "[data-element='editor-footer'] div.umb-button",
+        "elementPreventClick": false,
+        "backdropOpacity": 0.5,
+        "event": "click",
+        "view": null,
+        "eventElement": "",
+        "customProperties": null
+      }
+    ]
+  }
+]
