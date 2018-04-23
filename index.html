@@ -522,6 +522,32 @@
 											</code></pre>
 			</section>
 			<section>
+				<h2>Filtering tours</h2>
+				<p>Using TourResolver.Current we can filter on</p>
+				<ul>
+					<li>Filename : TourResolver.Current.AddFilterByFile</li>
+					<li>Pluginname : TourResolver.Current.AddFilterByPlugin</li>
+					<li>Tour alias : TourResolver.Current.AddFilterByAlias</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Filter tours - example</h2>
+				<pre class="small"><code class="csharp" data-trim contenteditable>
+using Umbraco.Core;
+using Umbraco.Core.Events;
+using Umbraco.Web;
+
+public class Events : ApplicationEventHandler
+{
+	protected override void ApplicationStarting(UmbracoApplicationBase umbracoApplication,
+		ApplicationContext applicationContext)
+    {
+		TourFilterResolver.Current.AddFilterByFile("getting-started");
+    }
+}
+																	</code></pre>
+			</section>
+			<section>
 				<h2>Useful links - Packages</h2>
 				<ul>
 					<li>
