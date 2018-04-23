@@ -1,4 +1,4 @@
-#A tour of the tour#
+# A tour of the tour #
 
 This repo contains all the code samples from my "A tour of the tour" talk.
 
